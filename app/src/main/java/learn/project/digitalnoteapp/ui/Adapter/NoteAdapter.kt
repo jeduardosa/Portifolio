@@ -1,29 +1,34 @@
 package learn.project.digitalnoteapp.ui.Adapter
 
-import android.service.autofill.Dataset
+import android.content.Context
+import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import learn.project.digitalnoteapp.R
+import learn.project.digitalnoteapp.Note
+import learn.project.digitalnoteapp.databinding.ListNoteModelBinding
 
-class NoteAdapter(private val dataset:Array<String>): RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView = view.binding(R.id.textView)
+class NoteAdapter(private val context: Context, private val noteList: MutableList<Note>) :
+    RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        val itemLista = ListNoteModelBinding.inflate(LayoutInflater.from(context), parent, false)
+        return NoteViewHolder(itemLista)
+    }
+
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
+        holder.edtTitulo.setText(noteList[position].titulo)
+        holder.edtCXtexto.setText(noteList[position].cxtexto)
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+    override fun getItemCount() = noteList.size
+
+    inner class NoteViewHolder(binding: ListNoteModelBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        val edtTitulo = binding.edtTitulo
+        val edtCXtexto = binding.edtCXtexto
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
-
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
 }
+
