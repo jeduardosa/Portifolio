@@ -5,34 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/cor_fundo_caixa_texto"
-    android:padding="16dp">
+    android:padding="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed">
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:text="@string/txtUltimaedicao"
+        android:textAlignment="textEnd"
+        app:layout_constraintHorizontal_bias="0.6"
+        />
 
     <EditText
         android:id="@+id/edtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/transparent"
         android:hint="Título"
+        android:textColorHint="@color/black"
         android:textSize="16sp"
+        android:background="@android:color/transparent"
+        app:layout_constraintHorizontal_bias="0.4"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--android:background="@color/cor_fundo_caixa_texto"-->
+        app:layout_constraintTop_toBottomOf="@+id/newBox">
     <EditText
         android:id="@+id/edtCXtexto"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:gravity="start|top"
         android:hint="Digite sua anotação"
+        android:textColorHint="@color/black"
         android:inputType="textMultiLine"
         android:singleLine="false"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTitulo" />
+        android:textSize="16sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

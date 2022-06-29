@@ -1,11 +1,8 @@
 package learn.project.digitalnoteapp
 
-import android.text.Editable
 
-
-data class Note( val titulo: String, val cxtexto: String,
-    var id: Int = getAutoId()
-) {
+data class Note( val titulo: String, val cxtexto: String, val txtDate: String,
+   var id: Int = getAutoId()) {
 
 
     companion object {
@@ -14,5 +11,8 @@ data class Note( val titulo: String, val cxtexto: String,
             return random.nextInt(100)
 
         }
+
     }
 }
+
+

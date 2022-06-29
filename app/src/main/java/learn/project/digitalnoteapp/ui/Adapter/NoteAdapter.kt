@@ -19,6 +19,7 @@ class NoteAdapter(private val context: Context, private val noteList: MutableLis
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         holder.edtTitulo.setText(noteList[position].titulo)
         holder.edtCXtexto.setText(noteList[position].cxtexto)
+        holder.txtDate.setText(noteList[position].txtDate)
 
     }
 
@@ -28,6 +29,7 @@ class NoteAdapter(private val context: Context, private val noteList: MutableLis
         RecyclerView.ViewHolder(binding.root) {
         val edtTitulo = binding.edtTitulo
         val edtCXtexto = binding.edtCXtexto
+        val txtDate = binding.txtDate
     }
 
 }
