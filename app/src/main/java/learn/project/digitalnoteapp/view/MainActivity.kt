@@ -1,12 +1,14 @@
-package learn.project.digitalnoteapp
+package learn.project.digitalnoteapp.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import learn.project.digitalnoteapp.Note
+import learn.project.digitalnoteapp.NoteAdapter
+import learn.project.digitalnoteapp.R
 import learn.project.digitalnoteapp.databinding.ActivityMainBinding
-import learn.project.digitalnoteapp.ui.Adapter.NoteAdapter
-import java.text.SimpleDateFormat
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -26,9 +28,17 @@ class MainActivity : AppCompatActivity() {
 
         noteAdapter = NoteAdapter(this, noteList)
         recyclerView.adapter = noteAdapter
-        testeNotas()
-    }
 
+/*
+        binding.FloatingActionButtonAdd.setOnClickListener {
+            val Intent = Intent(this, CreateNotesFragment::class.java)
+            startActivity(Intent)
+        } */
+
+        //testeNotas()
+
+    }
+/*
     private fun testeNotas(){
         val notas1 = Note( "lista de compras", "Lorem ipsum bla bla bla", "Ultima edição: ")
         noteList.add(notas1)
@@ -38,5 +48,5 @@ class MainActivity : AppCompatActivity() {
         noteList.add(notas3)
         val notas4 = Note( "lista de compras3", "Lorem ipsum bla bla bla3", "Ultima edição: ")
         noteList.add(notas4)
-    }
+    }*/
 }

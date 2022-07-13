@@ -1,10 +1,9 @@
-package learn.project.digitalnoteapp.ui.Adapter
+package learn.project.digitalnoteapp
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import learn.project.digitalnoteapp.Note
 import learn.project.digitalnoteapp.databinding.ListNoteModelBinding
 
 class NoteAdapter(private val context: Context, private val noteList: MutableList<Note>) :

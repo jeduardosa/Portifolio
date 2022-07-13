@@ -1,9 +1,10 @@
-package learn.project.digitalnoteapp
+package learn.project.digitalnoteapp.repository
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import learn.project.digitalnoteapp.Note
 
 class SQLiteHelper(context: Context) :
         SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
@@ -17,13 +18,13 @@ class SQLiteHelper(context: Context) :
                 private const val CXTEXTO = "cx_texto"
             }
 
-    override fun onCreate(db: SQLiteDatabase?) {
+    override fun onCreate(db: SQLiteDatabase) {
         val createTblNote = ("CREATE TABLE " + TBL_NOTE + "(" + ID + "INTERGER PRIMARY KEY,"
                 + TITLE + "TEXT," + CXTEXTO + "TEXT" + ")")
         db?.execSQL(createTblNote)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db!!.execSQL("DROP TABLE IF EXISTS $TBL_NOTE")
         onCreate(db)
     }
