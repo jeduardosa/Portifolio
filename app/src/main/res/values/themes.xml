@@ -17,4 +17,13 @@
     <style name="ProgressBar">
         <item name="colorOnPrimary">@color/yellowPrimary</item>
     </style>
+
+    <style name="Theme.DigitalNoteApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.DigitalNoteApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.DigitalNoteApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

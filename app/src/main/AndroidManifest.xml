@@ -12,23 +12,23 @@
         android:theme="@style/Theme.DigitalNoteApp"
         tools:targetApi="31">
         <activity
+            android:name=".view.EditDetailsNote"
+            android:exported="false"
+            android:label="@string/title_activity_edit_details_note"
+            android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />
+        <activity
             android:name=".SplashScreen"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
-
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:exported="true">
+            android:exported="true"></activity>
 
-        </activity>
-        <activity android:name=".view.CreateNotesFragment"
-            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>

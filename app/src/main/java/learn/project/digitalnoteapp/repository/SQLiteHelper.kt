@@ -42,6 +42,4 @@ class SQLiteHelper(context: Context) :
         return success
     }
 
-
-
 }
