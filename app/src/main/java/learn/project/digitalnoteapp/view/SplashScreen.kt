@@ -1,11 +1,11 @@
-package learn.project.digitalnoteapp
+package learn.project.digitalnoteapp.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import learn.project.digitalnoteapp.view.MainActivity
+import learn.project.digitalnoteapp.R
 
 class SplashScreen : AppCompatActivity() {
 

@@ -2,4 +2,6 @@
 <resources>
     <string name="txtUltimaedicao">Ultima edição: </string>
     <string name="hello_blank_fragment" />
+    <string name="titulo">Título</string>
+    <string name="anotacao">Digite sua anotação</string>
 </resources>

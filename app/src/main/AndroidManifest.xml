@@ -12,12 +12,17 @@
         android:theme="@style/Theme.DigitalNoteApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.EditDetailsNote"
+            android:name=".NoteListActivity"
+            android:exported="false"
+            android:label="@string/title_activity_note_list"
+            android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />
+        <activity
+            android:name=".view.EditNote"
             android:exported="false"
             android:label="@string/title_activity_edit_details_note"
             android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".view.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,8 +32,7 @@
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:exported="true"></activity>
-
+            android:exported="true" />
     </application>
 
 </manifest>
