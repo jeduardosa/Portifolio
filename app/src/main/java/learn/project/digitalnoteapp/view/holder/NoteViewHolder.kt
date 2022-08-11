@@ -12,9 +12,9 @@ class NoteViewHolder(private val bind: NoteModelListBinding, private val listene
     fun bind(note: NoteModel) {
 
         bind.textTitle.text = note.title
-        bind.textAnnotation.text = note.cxtext
+        bind.textAnnotation.text = note.annotation
 
-        bind.fullModel.setOnClickListener {
+        bind.textAnnotation.setOnClickListener {
             listener.onClick(note.id)
         }
         //Confirmação de delete

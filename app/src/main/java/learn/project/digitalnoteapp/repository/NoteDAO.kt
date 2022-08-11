@@ -18,10 +18,12 @@ interface NoteDAO {
     @Query("SELECT * FROM Note WHERE id = :id")
     fun get(id: Int): NoteModel
 
-    @Query("SELECT * FROM Note WHERE title = :title AND annotation = :annotation" )
-    fun getText(title: String, annotation: String): NoteModel
-
     @Query("SELECT * FROM Note")
     fun getLoad(): List<NoteModel>
 
 }
+
+/*
+    @Query("SELECT * FROM Note WHERE id = :id AND title = :title AND annotation = :annotation")
+    fun get(id: Int, title: String, annotation: String): NoteModel
+ */

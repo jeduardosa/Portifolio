@@ -37,8 +37,4 @@ class EditNoteViewModel(application: Application) : AndroidViewModel(application
         noteModel.value = repository.get(id)
     }
 
-    fun getText(title: String, annotation: String): NoteModel? {
-        noteModel.value = getText(title, annotation)!!
-    }
-
 }

@@ -15,7 +15,7 @@ class NoteModel {
     var title: String = ""
 
     @ColumnInfo(name = "annotation")
-    var cxtext: String = ""
+    var annotation: String = ""
 
 }
 

@@ -17,8 +17,6 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityEditNoteBinding
     private lateinit var viewModel: EditNoteViewModel
     private var noteId = 0
-    private var noteTitle = ""
-    private var noteAnnotation = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,24 +40,17 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
             val model = NoteModel().apply {
                 this.id = noteId
                 this.title = title
-                this.cxtext = annotation
+                this.annotation = annotation
             }
             viewModel.save(model)
         }
     }
 
-    private fun loadData() {
-        val bundle = intent.extras
-        if (bundle != null) {
-            noteId = bundle.getInt(DataBaseConstants.NOTE.ID)
-            noteTitle = bundle.getInt(DataBaseConstants.NOTE.COLUMNS.TITLE).toString()
-            noteAnnotation = bundle.getInt(DataBaseConstants.NOTE.COLUMNS.ANNOTATION).toString()
-            viewModel.get(noteId)
-            viewModel.getText(noteTitle, noteAnnotation)
-        }
-    }
-
     private fun observe() {
+        viewModel.note.observe(this, {
+            binding.editTitle.setText(it.title)
+            binding.editAnnotation.setText(it.annotation)
+        })
 
         viewModel.saveNote.observe(this, Observer {
             if (it != "") {
@@ -68,6 +59,16 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
     }
+
+
+    private fun loadData() {
+        val bundle = intent.extras
+        if (bundle != null) {
+            noteId = bundle.getInt(DataBaseConstants.NOTE.ID)
+            viewModel.get(noteId)
+        }
+    }
+
 }
 
 
