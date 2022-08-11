@@ -35,4 +35,12 @@ class NoteRepository private constructor(context: Context) {
         return noteDatabase.get(id)
     }
 
+    fun getText(title: String, annotation: String): NoteModel {
+        return noteDatabase.getText(title, annotation)
+    }
+
+    fun getLoad(): List<NoteModel> {
+        return noteDatabase.getLoad()
+    }
+
 }

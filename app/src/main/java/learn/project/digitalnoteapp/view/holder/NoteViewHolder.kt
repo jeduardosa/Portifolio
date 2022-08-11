@@ -6,18 +6,19 @@ import learn.project.digitalnoteapp.databinding.NoteModelListBinding
 import learn.project.digitalnoteapp.model.NoteModel
 import learn.project.digitalnoteapp.view.listener.OnNoteListener
 
-class NoteViewHolder(private val binding: NoteModelListBinding, private val listener: OnNoteListener) :
-    RecyclerView.ViewHolder(binding.root) {
+class NoteViewHolder(private val bind: NoteModelListBinding, private val listener: OnNoteListener) :
+    RecyclerView.ViewHolder(bind.root) {
 
     fun bind(note: NoteModel) {
-        val edtTitulo = binding.editTitle
-        val edtCXtexto = binding.editAnnotation
 
-        binding.newBox2.setOnClickListener {
+        bind.textTitle.text = note.title
+        bind.textAnnotation.text = note.cxtext
+
+        bind.fullModel.setOnClickListener {
             listener.onClick(note.id)
         }
         //Confirmação de delete
-        binding.newBox2.setOnLongClickListener {
+        bind.textAnnotation.setOnLongClickListener {
 
             AlertDialog.Builder(itemView.context)
                 .setTitle("Remoção de convidado")

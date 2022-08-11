@@ -5,16 +5,16 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Note")
-class NoteModel{
+class NoteModel {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     var id: Int = 0
 
-    @ColumnInfo(name = "titulo")
+    @ColumnInfo(name = "title")
     var title: String = ""
 
-    @ColumnInfo(name = "CXtexo")
+    @ColumnInfo(name = "annotation")
     var cxtext: String = ""
 
 }

@@ -2,63 +2,68 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/full_model"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/yellowPrimary"
     android:padding="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/newBox"
+        android:id="@+id/box1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/teal_200"
+        android:orientation="horizontal"
+        android:background="@color/cor_fundo_caixa_texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed">
-    <TextView
-        android:id="@+id/txtDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:text="@string/txtUltimaedicao"
-        android:textAlignment="textEnd"
-        app:layout_constraintHorizontal_bias="0.6"
-        />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/titulo"
-        android:textColorHint="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="@android:color/transparent"
-        app:layout_constraintHorizontal_bias="0.4"/>
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/titulo"
+            android:maxLength="20"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/txtUltimaedicao"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/newBox2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/purple_200"
+        android:layout_height="180dp"
+        android:background="@color/cor_fundo_caixa_texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newBox">
-    <EditText
-        android:id="@+id/editAnnotation"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@android:color/transparent"
-        android:gravity="start|top"
-        android:hint="@string/anotacao"
-        android:textColorHint="@color/black"
-        android:inputType="textMultiLine"
-        android:singleLine="false"
-        android:textSize="18sp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/box1">
 
+        <TextView
+            android:id="@+id/textAnnotation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="start|top"
+            android:hint="@string/anotacao"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textColorHint="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

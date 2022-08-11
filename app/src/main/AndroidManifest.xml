@@ -17,7 +17,7 @@
             android:label="@string/title_activity_note_list"
             android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />
         <activity
-            android:name=".view.EditNote"
+            android:name=".view.EditNoteActivity"
             android:exported="false"
             android:label="@string/title_activity_edit_details_note"
             android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />

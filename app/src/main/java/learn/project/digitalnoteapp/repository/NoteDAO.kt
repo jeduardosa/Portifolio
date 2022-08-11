@@ -1,6 +1,5 @@
 package learn.project.digitalnoteapp.repository
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import learn.project.digitalnoteapp.model.NoteModel
 
@@ -19,5 +18,10 @@ interface NoteDAO {
     @Query("SELECT * FROM Note WHERE id = :id")
     fun get(id: Int): NoteModel
 
+    @Query("SELECT * FROM Note WHERE title = :title AND annotation = :annotation" )
+    fun getText(title: String, annotation: String): NoteModel
+
+    @Query("SELECT * FROM Note")
+    fun getLoad(): List<NoteModel>
 
 }

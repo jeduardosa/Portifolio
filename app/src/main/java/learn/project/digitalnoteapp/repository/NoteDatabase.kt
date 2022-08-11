@@ -22,6 +22,7 @@ abstract class NoteDatabase() : RoomDatabase() {
                 synchronized(NoteDatabase::class) {
                     INSTANCE = Room.databaseBuilder(context, NoteDatabase::class.java, "notedb")
                         .addMigrations(/* MIGRATION_VERSION */)
+                        .allowMainThreadQueries()
                         .build()
                 }
             }

@@ -21,11 +21,19 @@ class NoteAdapter : RecyclerView.Adapter<NoteViewHolder>() {
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         holder.bind(noteList[position])
-
     }
 
-    override fun getItemCount(): Int = noteList.size
+    override fun getItemCount(): Int {
+        return noteList.count()
+    }
 
+    fun updateNotes(list: List<NoteModel>) {
+        noteList = list
+        notifyDataSetChanged()
+    }
 
+    fun attachListener(noteListener: OnNoteListener) {
+        listener = noteListener
+    }
 }
 

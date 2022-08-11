@@ -1,13 +1,13 @@
 package learn.project.digitalnoteapp.viewmodel
 
 import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import learn.project.digitalnoteapp.model.NoteModel
 import learn.project.digitalnoteapp.repository.NoteRepository
 
-class EditNoteViewModel(application: Application) : ViewModel() {
+class EditNoteViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = NoteRepository.getInstance(application)
 
@@ -24,15 +24,21 @@ class EditNoteViewModel(application: Application) : ViewModel() {
             } else {
                 _saveNote.value = "Falha"
             }
-    } else
-    {
-        if (repository.update(note)) {
-            _saveNote.value = "Atualização com sucesso"
         } else {
-            _saveNote.value = "Falha"
+            if (repository.update(note)) {
+                _saveNote.value = "Atualização com sucesso"
+            } else {
+                _saveNote.value = "Falha"
+            }
         }
     }
+
+    fun get(id: Int) {
+        noteModel.value = repository.get(id)
     }
 
+    fun getText(title: String, annotation: String): NoteModel? {
+        noteModel.value = getText(title, annotation)!!
+    }
 
 }
