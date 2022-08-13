@@ -47,10 +47,10 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun observe() {
-        viewModel.note.observe(this, {
+        viewModel.note.observe(this) {
             binding.editTitle.setText(it.title)
             binding.editAnnotation.setText(it.annotation)
-        })
+        }
 
         viewModel.saveNote.observe(this, Observer {
             if (it != "") {

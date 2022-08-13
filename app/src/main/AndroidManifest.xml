@@ -11,28 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigitalNoteApp"
         tools:targetApi="31">
-        <activity
-            android:name=".NoteListActivity"
-            android:exported="false"
-            android:label="@string/title_activity_note_list"
-            android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />
-        <activity
+         <activity
             android:name=".view.EditNoteActivity"
             android:exported="false"
             android:label="@string/title_activity_edit_details_note"
             android:theme="@style/Theme.DigitalNoteApp.NoActionBar" />
         <activity
             android:name=".view.SplashScreen"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.DigitalNoteApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".view.MainActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.DigitalNoteApp.NoActionBar"/>
     </application>
 
 </manifest>
