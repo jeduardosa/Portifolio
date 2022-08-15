@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
-        binding.FloatingActionButtonAdd.setOnClickListener { view ->
+        binding.bottomNavMenu.FloatingActionButtonAdd.setOnClickListener { view ->
             startActivity(Intent(applicationContext, EditNoteActivity::class.java))
         }
 

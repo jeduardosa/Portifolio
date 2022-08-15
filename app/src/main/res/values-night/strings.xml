@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="txtUltimaedicao">Ultima edição: </string>
-    <string name="hello_blank_fragment" />
     <string name="titulo">Título</string>
     <string name="anotacao">Digite sua anotação</string>
     <string name="title">Título</string>

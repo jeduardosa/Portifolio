@@ -12,13 +12,13 @@
         android:layout_height="280dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
-        android:src="@drawable/writing_note"
+        android:src="@drawable/img_writing_note"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/header_layer"
+        android:background="@drawable/style_header_layer"
         app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/camp_text_background"
+        android:background="@drawable/style_camp_text_background"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -156,7 +156,7 @@
             android:layout_height="200dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/layer_list"
+            android:background="@drawable/style_layer_list"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/editAnnotation" />
@@ -175,7 +175,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/yellowDark"
-        android:background="@drawable/button_background"
+        android:background="@drawable/style_button_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAnnotation"
