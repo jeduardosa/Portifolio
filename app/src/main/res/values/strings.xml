@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Digital Note app</string>
+    <string name="app_name">Digital Note</string>
     <!-- TODO: Remove or change this placeholder text -->
 
     <string name="txtUltimaedicao">Ultima edição: </string>
