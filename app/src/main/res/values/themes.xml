@@ -1,16 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base LIGHT application theme. -->
     <style name="Theme.DigitalNoteApp.LIGHT" parent="Theme.MaterialComponents.Light.NoActionBar">
-
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/yellowLight</item>
-        <item name="colorPrimaryVariant">@color/yellowPrimary</item>
-        <item name="colorOnPrimary">@color/yellowDark</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/primaryDarkColor</item>
 
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/yellowPrimary</item>
-        <item name="colorSecondaryVariant">@color/yellowDark</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/primaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryTextColor</item>
+        <item name="colorOnSecondary">@color/secondaryDarkColor</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -22,7 +22,14 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <!-- Toolbar support color -->
+    <style name="ThemeOverlay.MyApp.Toolbar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorSurface">@color/primaryColor</item>
+        <item name="colorOnSurface">@color/primaryColor</item>
+    </style>
+
+    <!-- Spash load -->
     <style name="ProgressBar">
-        <item name="colorOnPrimary">@color/yellowPrimary</item>
+        <item name="colorOnPrimary">@color/primaryColor</item>
     </style>
 </resources>

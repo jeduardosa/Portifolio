@@ -3,15 +3,21 @@
     <color name="black">#FF000000</color>
     <color name="gray">#212121</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="yellowPrimary">#ffd600</color>
-    <color name="yellowDark">#c7a500</color>
-    <color name="yellowLight">#ffff52</color>
-    <color name="cor_fundo_caixa_texto">#FFFCC6</color>
+
+    <color name="primaryColor">#ffd600</color>
+    <color name="primaryLightColor">#ffff52</color>
+    <color name="primaryDarkColor">#c7a500</color>
+    <color name="secondaryColor">#212121</color>
+    <color name="secondaryLightColor">#484848</color>
+    <color name="secondaryDarkColor">#000000</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
     <color name="colorLayerSemiDark">#60000000</color>
     <color name="colorLayerDark">#D6000000</color>
-    <color name="background_result">#efebe9</color>
-    <color name="colorAccent">#F13413</color>
-    <color name="colorWhite">#FFFFFF</color>
     <color name="colorTextPrimary">#212121</color>
     <color name="colorTextHint">#808080</color>
+
+
+
 </resources>

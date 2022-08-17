@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.EditNoteActivity">
 
     <ImageView
@@ -86,9 +87,9 @@
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/ic_writing"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_writing"
         app:layout_constraintStart_toStartOf="@+id/editTitle"
         app:layout_constraintTop_toTopOf="@+id/editTitle"
         app:tint="@color/colorTextHint" />
@@ -170,16 +171,29 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
         android:text="@string/save"
         android:textAllCaps="false"
+        android:textColor="@color/colorTextHint"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/yellowDark"
-        android:background="@drawable/style_button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAnnotation"
         tools:ignore="NotSibling" />
 
+    <View
+        android:id="@+id/viewbtnSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/style_button_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAnnotation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
