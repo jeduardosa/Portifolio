@@ -4,18 +4,15 @@
 
     <string name="txtUltimaedicao">Ultima edição: </string>
     <string name="title_activity_edit_details_note">EditDetailsNote</string>
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_note_list">NoteListActivity</string>
     <string name="titulo">Título</string>
     <string name="anotacao">Digite sua anotação</string>
     <string name="title">Título</string>
     <string name="annotation">Anotação</string>
     <string name="save">Salvar</string>
-    <string name="tag_line_text">Não é só deus que salva, nós também!</string>
+    <string name="tag_line_text">Não é só Deus que salva, nós também!</string>
+    <string name="txtCreateDate">Criado em:</string>
 </resources>
