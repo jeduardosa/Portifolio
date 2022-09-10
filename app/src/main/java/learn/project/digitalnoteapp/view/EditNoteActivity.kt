@@ -1,7 +1,9 @@
 package learn.project.digitalnoteapp.view
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
+import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -11,28 +13,34 @@ import learn.project.digitalnoteapp.constants.DataBaseConstants
 import learn.project.digitalnoteapp.databinding.ActivityEditNoteBinding
 import learn.project.digitalnoteapp.model.NoteModel
 import learn.project.digitalnoteapp.viewmodel.EditNoteViewModel
+import java.text.SimpleDateFormat
+import java.util.*
 
-class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
+class EditNoteActivity : AppCompatActivity(), View.OnClickListener{
 
     private lateinit var binding: ActivityEditNoteBinding
     private lateinit var viewModel: EditNoteViewModel
     private var noteId = 0
+    private val dateFormat = SimpleDateFormat("dd/MM/yyyy")
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityEditNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        supportActionBar?.hide()
         viewModel = ViewModelProvider(this).get(EditNoteViewModel::class.java)
 
         binding.btnSalvar.setOnClickListener(this)
 
         observe()
-        loadData()
+        //loadData()
     }
 
     override fun onClick(v: View?) {
+
         if (v!!.id == R.id.btnSalvar) {
             val title = binding.editTitle.text.toString()
             val annotation = binding.editAnnotation.text.toString()
@@ -60,7 +68,6 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
         })
     }
 
-
     private fun loadData() {
         val bundle = intent.extras
         if (bundle != null) {
@@ -68,6 +75,7 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener {
             viewModel.get(noteId)
         }
     }
+
 
 }
 

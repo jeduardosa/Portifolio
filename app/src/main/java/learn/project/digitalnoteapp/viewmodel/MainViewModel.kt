@@ -1,6 +1,8 @@
 package learn.project.digitalnoteapp.viewmodel
 
 import android.app.Application
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -21,5 +23,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun delete(id: Int) {
         repository.delete(id)
     }
+
 }
 

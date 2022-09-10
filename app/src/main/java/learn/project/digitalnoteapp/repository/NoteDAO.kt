@@ -21,9 +21,13 @@ interface NoteDAO {
     @Query("SELECT * FROM Note")
     fun getLoad(): List<NoteModel>
 
+
 }
 
 /*
+    @Query("SELECT * FROM Note WHERE date")
+    fun getDate(createDate: String): List<NoteModel>
+
     @Query("SELECT * FROM Note WHERE id = :id AND title = :title AND annotation = :annotation")
     fun get(id: Int, title: String, annotation: String): NoteModel
  */

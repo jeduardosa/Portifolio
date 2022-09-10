@@ -13,10 +13,17 @@ class NoteViewHolder(private val bind: NoteModelListBinding, private val listene
 
         bind.textTitle.text = note.title
         bind.textAnnotation.text = note.annotation
+        //bind.txtCreateDate.text = note.createDate
+
 
         bind.textAnnotation.setOnClickListener {
             listener.onClick(note.id)
         }
+        bind.masterConstraint.setOnClickListener {
+            listener.onClick(note.id)
+        }
+
+
         //Confirmação de delete
         bind.textAnnotation.setOnLongClickListener {
 

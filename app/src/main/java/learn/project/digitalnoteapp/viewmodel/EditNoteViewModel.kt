@@ -1,6 +1,8 @@
 package learn.project.digitalnoteapp.viewmodel
 
 import android.app.Application
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,9 +19,11 @@ class EditNoteViewModel(application: Application) : AndroidViewModel(application
     private val _saveNote = MutableLiveData<String>()
     val saveNote: LiveData<String> = _saveNote
 
+
     fun save(note: NoteModel) {
         if (note.id == 0) {
             if (repository.insert(note)) {
+
                 _saveNote.value = "Inserção com sucesso"
             } else {
                 _saveNote.value = "Falha"

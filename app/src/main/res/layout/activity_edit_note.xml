@@ -61,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/mainConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/style_camp_text_background"
@@ -72,26 +72,20 @@
 
     <EditText
         android:id="@+id/editTitle"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
+        style="@style/Default_edit_titles"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:hint="@string/title"
-        android:imeOptions="actionNext"
-        android:paddingStart="60dp"
-        android:paddingEnd="10dp"
+        app:layout_constraintStart_toEndOf="@+id/img_writing"
         app:layout_constraintTop_toBottomOf="@id/imageHeader" />
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:id="@+id/img_writing"
+        style="@style/Default_imageVector_for_titles"
         android:src="@drawable/ic_writing"
-        app:layout_constraintStart_toStartOf="@+id/editTitle"
-        app:layout_constraintTop_toTopOf="@+id/editTitle"
+        app:layout_constraintEnd_toStartOf="@+id/editTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageHeader"
         app:tint="@color/secondaryLightColor" />
 
     <View
@@ -108,33 +102,27 @@
         android:id="@+id/constraintLayoutAnnotation"
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         android:background="@null"
-        app:layout_constraintTop_toBottomOf="@id/viewDividerForTitle"
-        app:layout_constraintBottom_toTopOf="@+id/linearNoteColor">
+        app:layout_constraintBottom_toTopOf="@+id/linearNoteColor"
+        app:layout_constraintTop_toBottomOf="@id/viewDividerForTitle">
 
         <TextView
             android:id="@+id/textAnnotation"
-            android:layout_width="match_parent"
+            style="@style/Default_edit_titles"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@android:color/transparent"
             android:gravity="start|left"
             android:hint="@string/annotation"
-            android:paddingStart="60dp"
-            android:paddingEnd="10dp"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/viewDividerForTitle"
-            tools:ignore="NotSibling" />
+            app:layout_constraintStart_toEndOf="@+id/img_clipboard"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayoutAnnotation" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
+            android:id="@+id/img_clipboard"
+            style="@style/Default_imageVector_for_titles"
             android:src="@drawable/ic_clipboard"
-            app:layout_constraintStart_toStartOf="@+id/textAnnotation"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textAnnotation"
             app:tint="@color/secondaryLightColor" />
 
@@ -145,25 +133,15 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
-            android:background="@android:color/transparent"
+            android:background="@drawable/style_button_background"
+            app:backgroundTint="@color/secondaryLightColor"
             android:gravity="start|left"
-            android:paddingStart="60dp"
-            android:paddingEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textAnnotation"/>
-
-        <View
-            android:id="@+id/viewDividerForAnnotation"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/style_layer_list"
+            android:padding="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textAnnotation" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -171,8 +149,8 @@
         android:id="@+id/linearNoteColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="8dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/btnSalvar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -182,59 +160,45 @@
             android:id="@+id/textNoteColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:text="Escolha um cor:\n (Optativo)"
             android:textAlignment="center" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/blue"
+            style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
-            android:src="@drawable/ic_check"
-            />
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/ic_check" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/deepPink"
-            android:background="@drawable/style_pick_note_color" />
+            style="@style/Default_color_choices"
+            android:background="@drawable/style_pick_note_color"
+            android:backgroundTint="@color/deepPink" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/dark_red"
-            android:background="@drawable/style_pick_note_color" />
+            style="@style/Default_color_choices"
+            android:background="@drawable/style_pick_note_color"
+            android:backgroundTint="@color/dark_red" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/green"
-            android:background="@drawable/style_pick_note_color" />
+            style="@style/Default_color_choices"
+            android:background="@drawable/style_pick_note_color"
+            android:backgroundTint="@color/green" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/gray"
-            android:background="@drawable/style_pick_note_color" />
+            style="@style/Default_color_choices"
+            android:background="@drawable/style_pick_note_color"
+            android:backgroundTint="@color/gray" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/primaryColor"
-            android:background="@drawable/style_pick_note_color"/>
+            style="@style/Default_color_choices"
+            android:background="@drawable/style_pick_note_color"
+            android:backgroundTint="@color/primaryColor" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/MediumVioletRed"
-            android:background="@drawable/style_pick_note_color" />
+            style="@style/Default_color_choices"
+            android:background="@drawable/style_pick_note_color"
+            android:backgroundTint="@color/MediumVioletRed" />
 
     </LinearLayout>
 
@@ -245,28 +209,17 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/style_button_background"
         android:text="@string/save"
         android:textAllCaps="false"
         android:textColor="@color/secondaryLightColor"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/linearNoteColor"
+        app:backgroundTint="@color/secondaryLightColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearNoteColor" />
 
-    <View
-        android:id="@+id/viewbtnSalvar"
-        android:layout_width="match_parent"
-        android:layout_height="49dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/style_button_background"
-        app:layout_constraintTop_toBottomOf="@+id/linearNoteColor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

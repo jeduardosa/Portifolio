@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Digital Note</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
     <string name="txtUltimaedicao">Ultima edição: </string>
     <string name="title_activity_edit_details_note">EditDetailsNote</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="title_activity_note_list">NoteListActivity</string>
-    <string name="titulo">Título</string>
+
     <string name="anotacao">Digite sua anotação</string>
     <string name="title">Título</string>
     <string name="annotation">Anotação</string>
