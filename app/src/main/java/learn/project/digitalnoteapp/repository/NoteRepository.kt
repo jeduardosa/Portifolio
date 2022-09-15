@@ -27,7 +27,6 @@ class NoteRepository private constructor(context: Context) {
     }
 
     fun insert(note: NoteModel): Boolean {
-
         return noteDatabase.insert(note) > 0
     }
 

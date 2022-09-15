@@ -2,17 +2,17 @@
     <string name="app_name">Digital Note</string>
     <!-- TODO: Remove or change this placeholder text -->
 
+    <string name="txtCreateDate">Criado em:</string>
     <string name="txtUltimaedicao">Ultima edição: </string>
-    <string name="title_activity_edit_details_note">EditDetailsNote</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="title_activity_note_list">NoteListActivity</string>
-    <string name="titulo">Título</string>
+    <string name="fail" translatable="false">Falha</string>
+    <string name="save">Anotação Salva</string>
+    <string name="update">Anotação Atualizada</string>
+
+
     <string name="anotacao">Digite sua anotação</string>
     <string name="title">Título</string>
     <string name="annotation">Anotação</string>
-    <string name="save">Salvar</string>
+    <string name="btn_save">Salvar</string>
     <string name="tag_line_text">Não é só Deus que salva, nós também!</string>
-    <string name="txtCreateDate">Criado em:</string>
 </resources>

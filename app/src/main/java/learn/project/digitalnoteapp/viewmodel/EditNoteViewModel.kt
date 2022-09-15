@@ -6,6 +6,7 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import learn.project.digitalnoteapp.constants.DataBaseConstants
 import learn.project.digitalnoteapp.model.NoteModel
 import learn.project.digitalnoteapp.repository.NoteRepository
 
@@ -24,15 +25,15 @@ class EditNoteViewModel(application: Application) : AndroidViewModel(application
         if (note.id == 0) {
             if (repository.insert(note)) {
 
-                _saveNote.value = "Inserção com sucesso"
+                _saveNote.value = DataBaseConstants.MENSSAGE.SAVE
             } else {
-                _saveNote.value = "Falha"
+                _saveNote.value = DataBaseConstants.MENSSAGE.FAIL
             }
         } else {
             if (repository.update(note)) {
-                _saveNote.value = "Atualização com sucesso"
+                _saveNote.value = DataBaseConstants.MENSSAGE.UPDATE
             } else {
-                _saveNote.value = "Falha"
+                _saveNote.value = DataBaseConstants.MENSSAGE.FAIL
             }
         }
     }

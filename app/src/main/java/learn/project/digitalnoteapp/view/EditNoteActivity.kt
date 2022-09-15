@@ -36,7 +36,7 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener{
         binding.btnSalvar.setOnClickListener(this)
 
         observe()
-        //loadData()
+        loadData()
     }
 
     override fun onClick(v: View?) {
@@ -75,7 +75,6 @@ class EditNoteActivity : AppCompatActivity(), View.OnClickListener{
             viewModel.get(noteId)
         }
     }
-
 
 }
 
