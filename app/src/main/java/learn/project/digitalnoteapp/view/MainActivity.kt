@@ -30,13 +30,13 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
 
         binding.bottomNavMenu.FloatingActionButtonAdd.setOnClickListener { view ->
-            startActivity(Intent(applicationContext, EditNoteActivity::class.java))
+            startActivity(Intent(applicationContext, CreateNoteActivity::class.java))
         }
 
         val listener = object : OnNoteListener {
 
             override fun onClick(id: Int) {
-                val intent = Intent(applicationContext, EditNoteActivity::class.java)
+                val intent = Intent(applicationContext, CreateNoteActivity::class.java)
                 val bundle = Bundle()
                 bundle.putInt(DataBaseConstants.NOTE.ID, id)
                 intent.putExtras(bundle)

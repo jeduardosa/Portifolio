@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.EditNoteActivity">
+    tools:context=".view.CreateNoteActivity">
 
     <ImageView
         android:id="@+id/imageHeader"
@@ -65,6 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/style_camp_text_background"
+        android:backgroundTint="@color/specialLightColor"
         android:paddingStart="30dp"
         android:paddingEnd="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,40 +165,47 @@
             android:textAlignment="center" />
 
         <ImageView
+            android:id="@+id/img_blue"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/light_blue"
             android:src="@drawable/ic_check" />
 
         <ImageView
+            android:id="@+id/img_pink"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
             android:backgroundTint="@color/deepPink" />
 
         <ImageView
+            android:id="@+id/img_wine"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
             android:backgroundTint="@color/dark_red" />
 
         <ImageView
+            android:id="@+id/img_green"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
             android:backgroundTint="@color/green" />
 
         <ImageView
+            android:id="@+id/img_Light_gray"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
-            android:backgroundTint="@color/gray" />
+            android:backgroundTint="@color/secondaryLightColor" />
 
         <ImageView
+            android:id="@+id/img_yellow"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
             android:backgroundTint="@color/primaryColor" />
 
         <ImageView
+            android:id="@+id/img_White"
             style="@style/Default_color_choices"
             android:background="@drawable/style_pick_note_color"
-            android:backgroundTint="@color/MediumVioletRed" />
+            android:backgroundTint="@color/white" />
 
     </LinearLayout>
 

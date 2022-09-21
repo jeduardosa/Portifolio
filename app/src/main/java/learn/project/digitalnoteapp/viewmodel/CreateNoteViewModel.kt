@@ -10,7 +10,7 @@ import learn.project.digitalnoteapp.constants.DataBaseConstants
 import learn.project.digitalnoteapp.model.NoteModel
 import learn.project.digitalnoteapp.repository.NoteRepository
 
-class EditNoteViewModel(application: Application) : AndroidViewModel(application) {
+class CreateNoteViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = NoteRepository.getInstance(application)
 

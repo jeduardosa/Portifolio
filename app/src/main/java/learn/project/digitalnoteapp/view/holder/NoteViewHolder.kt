@@ -1,5 +1,6 @@
 package learn.project.digitalnoteapp.view.holder
 
+import android.graphics.Color
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import learn.project.digitalnoteapp.databinding.NoteModelListBinding
@@ -15,14 +16,17 @@ class NoteViewHolder(private val bind: NoteModelListBinding, private val listene
         bind.textAnnotation.text = note.annotation
         //bind.txtCreateDate.text = note.createDate
 
+        //color
+
 
         bind.textAnnotation.setOnClickListener {
             listener.onClick(note.id)
         }
         bind.masterConstraint.setOnClickListener {
+            bind.masterConstraint.setBackgroundColor(Color.WHITE)
+
             listener.onClick(note.id)
         }
-
 
         //Confirmação de delete
         bind.textAnnotation.setOnLongClickListener {
