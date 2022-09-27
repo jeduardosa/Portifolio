@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Digital Note</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="txtCreateDate">Criado em:</string>
+    <string name="txtUltimaedicao">Ultima edição: </string>
+
+    <string name="fail" translatable="false">Falha</string>
+    <string name="save">Anotação Salva</string>
+    <string name="update">Anotação Atualizada</string>
+
+
+    <string name="anotacao">Digite sua anotação</string>
+    <string name="title">Título</string>
+    <string name="annotation">Anotação</string>
+    <string name="btn_save">Salvar</string>
+    <string name="tag_line_text">Não é só Deus que salva, nós também!</string>
+</resources>
