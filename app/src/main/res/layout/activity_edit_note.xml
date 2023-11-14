@@ -74,7 +74,7 @@
     <EditText
         android:id="@+id/editTitle"
         style="@style/Default_edit_titles"
-        android:layout_width="200dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/title"
         app:layout_constraintStart_toEndOf="@+id/img_writing"
@@ -84,9 +84,9 @@
         android:id="@+id/img_writing"
         style="@style/Default_imageVector_for_titles"
         android:src="@drawable/ic_writing"
-        app:layout_constraintEnd_toStartOf="@+id/editTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageHeader"
+        app:layout_constraintTop_toTopOf="@+id/editTitle"
         app:tint="@color/secondaryLightColor" />
 
     <View
@@ -94,7 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/secondaryLightColor"
         app:layout_constraintTop_toBottomOf="@+id/editTitle" />
@@ -102,10 +102,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayoutAnnotation"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="280dp"
         android:layout_marginTop="5dp"
         android:background="@null"
-        app:layout_constraintBottom_toTopOf="@+id/linearNoteColor"
         app:layout_constraintTop_toBottomOf="@id/viewDividerForTitle">
 
         <TextView
@@ -130,13 +129,14 @@
         <EditText
             android:id="@+id/editAnnotation"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="200dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/style_button_background"
             android:gravity="start|left"
             android:padding="5dp"
+            android:textColor="@color/black"
             app:backgroundTint="@color/secondaryLightColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -144,7 +144,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <!--
     <LinearLayout
         android:id="@+id/linearNoteColor"
         android:layout_width="wrap_content"
@@ -208,7 +208,7 @@
             android:backgroundTint="@color/white" />
 
     </LinearLayout>
-
+       -->
     <Button
         android:id="@+id/btnSalvar"
         android:layout_width="match_parent"
@@ -226,7 +226,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearNoteColor" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutAnnotation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,13 +1,7 @@
 package learn.project.digitalnoteapp.repository
 
 import android.content.Context
-import android.os.Build
-import androidx.annotation.RequiresApi
 import learn.project.digitalnoteapp.model.NoteModel
-import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 class NoteRepository private constructor(context: Context) {
 
@@ -47,7 +41,4 @@ class NoteRepository private constructor(context: Context) {
         return noteDatabase.getLoad()
     }
 
-    fun getDate() {
-        //return SimpleDateFormat("dd/MM/yyyy").format(trans.created_date.toDate())
-    }
 }

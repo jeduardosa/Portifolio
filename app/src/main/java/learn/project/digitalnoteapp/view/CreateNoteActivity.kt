@@ -20,7 +20,6 @@ class CreateNoteActivity : AppCompatActivity(), View.OnClickListener{
     private lateinit var viewModel: CreateNoteViewModel
     private var noteId = 0
     private val dateFormat = SimpleDateFormat("dd/MM/yyyy")
-    private var selectedNoteColor = binding.imgBlue.setImageResource(R.drawable.ic_check)
 
 
 
@@ -34,7 +33,7 @@ class CreateNoteActivity : AppCompatActivity(), View.OnClickListener{
 
         binding.btnSalvar.setOnClickListener(this)
 
-        chooseColor()
+        //chooseColor()
         observe()
         loadData()
     }
@@ -76,7 +75,7 @@ class CreateNoteActivity : AppCompatActivity(), View.OnClickListener{
             viewModel.get(noteId)
         }
     }
-
+/*
     private fun chooseColor() {
 
         binding.imgBlue.setOnClickListener {
@@ -156,7 +155,7 @@ class CreateNoteActivity : AppCompatActivity(), View.OnClickListener{
 
         }
     }
-
+*/
 }
 
 

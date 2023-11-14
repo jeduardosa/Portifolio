@@ -7,7 +7,7 @@ import learn.project.digitalnoteapp.databinding.NoteModelListBinding
 import learn.project.digitalnoteapp.model.NoteModel
 import learn.project.digitalnoteapp.view.listener.OnNoteListener
 
-class NoteViewHolder(private val bind: NoteModelListBinding, private val listener: OnNoteListener) :
+class NoteHolder(private val bind: NoteModelListBinding, private val listener: OnNoteListener) :
     RecyclerView.ViewHolder(bind.root) {
 
     fun bind(note: NoteModel) {
@@ -23,8 +23,6 @@ class NoteViewHolder(private val bind: NoteModelListBinding, private val listene
             listener.onClick(note.id)
         }
         bind.masterConstraint.setOnClickListener {
-            bind.masterConstraint.setBackgroundColor(Color.WHITE)
-
             listener.onClick(note.id)
         }
 

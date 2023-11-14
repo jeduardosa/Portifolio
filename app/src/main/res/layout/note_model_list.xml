@@ -29,7 +29,7 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <!--
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_star"
             android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
             app:chipIconTint="@color/primaryColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
+        -->
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 app:layout_constraintStart_toStartOf="@+id/textTitle" />
 
         </LinearLayout>
-
+        <!--
         <TextView
             android:id="@+id/txtCreateDate"
             android:layout_width="0dp"
@@ -86,7 +86,7 @@
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent" />
-
+        -->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

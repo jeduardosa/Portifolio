@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/ic_check.xml" value="0.224" />
+        <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/ic_settings.xml" value="0.217" />
         <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/style_button_background.xml" value="0.194" />
         <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/style_camp_text_background.xml" value="0.277" />
+        <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/style_header_layer.xml" value="0.217" />
         <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/style_layer_list.xml" value="0.194" />
         <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/drawable/style_pick_note_color.xml" value="0.194" />
         <entry key="..\:/Users/0M3GH4/AndroidStudioProjects/DigitalNoteapp/app/src/main/res/layout/activity_edit_note.xml" value="0.33" />
@@ -16,7 +18,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -16,13 +16,6 @@ class NoteModel {
 
     @ColumnInfo(name = "annotation")
     var annotation: String = ""
-/*
-    @ColumnInfo(name = "date")
-    var createDate: String = ""
-
-    @ColumnInfo(name = "favorites")
-    var favorites: String = ""
-    */
 
 }
 

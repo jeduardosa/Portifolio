@@ -20,8 +20,9 @@
             android:background="@android:color/transparent"
             app:elevation="0dp"
             app:itemIconTint="@color/black"
-            app:itemTextColor="@color/black"
-            app:menu="@menu/app_bar_menu" />
+            app:itemTextColor="@color/black"/>
+            <!-- app:menu="@menu/app_bar_menu"/> -->
+
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

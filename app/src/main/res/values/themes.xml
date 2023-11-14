@@ -36,6 +36,7 @@
     <style name="Default_edit_titles">
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginTop">16dp</item>
         <item name="android:background">@android:color/transparent</item>
     </style>
 
